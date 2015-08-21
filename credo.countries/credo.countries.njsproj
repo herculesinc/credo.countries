@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="index.ts" />
+    <Content Include=".npmignore" />
     <Content Include="data\countries.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />

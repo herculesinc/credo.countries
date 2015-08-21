@@ -1,6 +1,6 @@
 {
-  "name": "credo.countries",
-  "version": "0.1.0",
+  "name": "@credo/countries",
+  "version": "0.1.2",
   "description": "Country data for Credo application",
   "main": "index.js",
   "author": {

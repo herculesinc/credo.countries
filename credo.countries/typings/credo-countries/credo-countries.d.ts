@@ -1,4 +1,4 @@
-﻿declare module "credo-countries" {
+﻿declare module "@credo/countries" {
 
     export function find(codeOrName: string): Country;
     

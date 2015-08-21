@@ -6,6 +6,10 @@
                 src: 'package.json',
                 dest: 'bin/package.json',
             },
+            npmignore: {
+                src: '.npmignore',
+                dest: 'bin/.npmignore',
+            },
             data: {
                 src: 'data/*',
                 dest: 'bin/',
