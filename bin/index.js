@@ -11,8 +11,7 @@ for (var i = 0; i < countries.length; i++) {
 // PUBLIC FUNCTIONS
 // =================================================================================================
 /**
- * Finds a country for the specified contry code or country name
- * @param {string} codeOrName - alpha2, alpha3, or country name (common or official)
+ * Finds a country for the specified contry code (alpha2 or alpha3) or country name (common or official)
  */
 function find(codeOrName) {
     codeOrName = codeOrName.toLowerCase();
@@ -32,16 +31,13 @@ function find(codeOrName) {
 exports.find = find;
 /**
  * Iterates over all countries and calls the callback function for each county
- * @param {function} callback - a function that gets called once for each country
  */
 function forEach(callback) {
     countries.forEach(callback);
 }
 exports.forEach = forEach;
 /**
- * Maps all countries using provided callback funciton
- * @param {function} callback - a function that gets called once for each country
- * @param {boolean} trimEmpty - an optional flag indicating whether emtpy values shoudl be removed from the returned array (deafult true)
+ * Maps all countries using provided callback funciton; if trimEmpty = true (default), excludes empty values from returned array
  */
 function map(callback, trimEmpty) {
     if (trimEmpty === void 0) { trimEmpty = true; }

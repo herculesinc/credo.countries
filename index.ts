@@ -29,8 +29,7 @@ export interface Country {
 // =================================================================================================
 
 /**
- * Finds a country for the specified contry code or country name
- * @param {string} codeOrName - alpha2, alpha3, or country name (common or official)
+ * Finds a country for the specified contry code (alpha2 or alpha3) or country name (common or official)
  */
 export function find(codeOrName: string): Country {
     codeOrName = codeOrName.toLowerCase();
@@ -52,16 +51,13 @@ export function find(codeOrName: string): Country {
 
 /**
  * Iterates over all countries and calls the callback function for each county
- * @param {function} callback - a function that gets called once for each country
  */
-export function forEach(callback: (country: Country, index?: number) => any) {
+export function forEach(callback: (country: Country, index?: number) => any): void {
     countries.forEach(callback);
 }
 
 /**
- * Maps all countries using provided callback funciton
- * @param {function} callback - a function that gets called once for each country
- * @param {boolean} trimEmpty - an optional flag indicating whether emtpy values shoudl be removed from the returned array (deafult true)
+ * Maps all countries using provided callback funciton; if trimEmpty = true (default), excludes empty values from returned array
  */
 export function map<T>(callback: (country: Country, index?: number) => T, trimEmpty = true): T[] {
     var retval: T[] = [];
