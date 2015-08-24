@@ -1,4 +1,4 @@
-﻿// Type definitions for mocha 2.2.5
+// Type definitions for mocha 2.2.5
 // Project: http://mochajs.org/
 // Definitions by: Kazi Manzur Rashid <https://github.com/kazimanzurrashid/>, otiai10 <https://github.com/otiai10>, jt000 <https://github.com/jt000>, Vadim Macagon <https://github.com/enlight>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
@@ -143,7 +143,7 @@ declare module Mocha {
     }
 
     /** Partial interface for Mocha's `Runner` class. */
-    interface IRunner { }
+    interface IRunner {}
 
     interface IContextDefinition {
         (description: string, spec: () => void): ISuite;
@@ -175,18 +175,18 @@ declare module Mocha {
             constructor(runner: IRunner);
         }
 
-        export class Doc extends Base { }
-        export class Dot extends Base { }
-        export class HTML extends Base { }
-        export class HTMLCov extends Base { }
-        export class JSON extends Base { }
-        export class JSONCov extends Base { }
-        export class JSONStream extends Base { }
-        export class Landing extends Base { }
-        export class List extends Base { }
-        export class Markdown extends Base { }
-        export class Min extends Base { }
-        export class Nyan extends Base { }
+        export class Doc extends Base {}
+        export class Dot extends Base {}
+        export class HTML extends Base {}
+        export class HTMLCov extends Base {}
+        export class JSON extends Base {}
+        export class JSONCov extends Base {}
+        export class JSONStream extends Base {}
+        export class Landing extends Base {}
+        export class List extends Base {}
+        export class Markdown extends Base {}
+        export class Min extends Base {}
+        export class Nyan extends Base {}
         export class Progress extends Base {
             /**
              * @param options.open String used to indicate the start of the progress bar.
@@ -201,8 +201,8 @@ declare module Mocha {
                 close?: string;
             });
         }
-        export class Spec extends Base { }
-        export class TAP extends Base { }
+        export class Spec extends Base {}
+        export class TAP extends Base {}
         export class XUnit extends Base {
             constructor(runner: IRunner, options?: any);
         }
