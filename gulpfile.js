@@ -10,16 +10,13 @@ gulp.task('clean', function(cb) {
 
 // compile TypeScript files
 gulp.task('build', ['clean'], function (cb) {
+  gulp.src('./package.json').pipe(gulp.dest('./bin'));
+  gulp.src('./.npmignore').pipe(gulp.dest('./bin'));
+  gulp.src('./data/*').pipe(gulp.dest('./bin/data'))
+      
   exec('tsc -p .', function (err, stdout, stderr) {
     if (stdout.length > 0) console.log(stdout);
     if (stderr.length > 0) console.error(stderr);
-    
-    if (!err) {
-      gulp.src('./package.json').pipe(gulp.dest('./bin'));
-      gulp.src('./.npmignore').pipe(gulp.dest('./bin'));
-      gulp.src('./data/*').pipe(gulp.dest('./bin/data'))
-    }
-    
     cb(err);
   });
 });
