@@ -11,7 +11,7 @@ gulp.task('clean', function(cb) {
 // compile TypeScript files
 gulp.task('build', ['clean'], function (cb) {
   gulp.src('./package.json').pipe(gulp.dest('./bin'));
-  gulp.src('./.npmignore').pipe(gulp.dest('./bin'));
+  gulp.src('./.settings/.npmignore').pipe(gulp.dest('./bin'));
   gulp.src('./data/*').pipe(gulp.dest('./bin/data'))
       
   exec('tsc -p .', function (err, stdout, stderr) {
