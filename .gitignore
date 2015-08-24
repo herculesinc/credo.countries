@@ -1,5 +1,5 @@
 #TypeScript Map Files
-.js.map
+*.map
 
 # Installed modules
 node_modules/
