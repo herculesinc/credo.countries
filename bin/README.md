@@ -1,4 +1,4 @@
-﻿# Countries
+# Countries
 A simple country info look-up module written for credo application.
 
 ## Install

@@ -12,6 +12,7 @@ gulp.task('clean', function(cb) {
 gulp.task('build', ['clean'], function (cb) {
   gulp.src('./package.json').pipe(gulp.dest('./bin'));
   gulp.src('./.settings/.npmignore').pipe(gulp.dest('./bin'));
+  gulp.src('./README.md').pipe(gulp.dest('./bin'));
   gulp.src('./data/*').pipe(gulp.dest('./bin/data'))
       
   exec('tsc -p .', function (err, stdout, stderr) {
@@ -27,8 +28,9 @@ gulp.task('test', ['build'], function () {
         .pipe(mocha({reporter: 'spec'}));
 });
 
+// publish to npm
 gulp.task('publish', ['build'], function (cb) {
-  exec('npm publish bin', function (err, stdout, stderr) {
+  exec('npm publish bin --access=public', function (err, stdout, stderr) {
     if (stdout.length > 0) console.log(stdout);
     if (stderr.length > 0) console.error(stderr);
     cb(err);
