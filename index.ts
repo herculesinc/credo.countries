@@ -44,3 +44,16 @@ export function find(codeOrName: string): Country {
         }
     }
 }
+
+export function forEach(callback: (country: Country, index?: number) => any) {
+    countries.forEach(callback);
+}
+
+export function map<T>(callback: (country: Country, index?: number) => T, trimEmpty = true): T[] {
+    var retval: T[] = [];
+    for (let i = 0; i < countries.length; i++) {
+        let mapped = callback(countries[i], i);
+        if (mapped || trimEmpty === false) retval.push(mapped);
+    }
+    return retval;
+}

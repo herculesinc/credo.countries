@@ -26,4 +26,19 @@ function find(codeOrName) {
     }
 }
 exports.find = find;
+function forEach(callback) {
+    countries.forEach(callback);
+}
+exports.forEach = forEach;
+function map(callback, trimEmpty) {
+    if (trimEmpty === void 0) { trimEmpty = true; }
+    var retval = [];
+    for (var i = 0; i < countries.length; i++) {
+        var mapped = callback(countries[i], i);
+        if (mapped || trimEmpty === false)
+            retval.push(mapped);
+    }
+    return retval;
+}
+exports.map = map;
 //# sourceMappingURL=index.js.map
