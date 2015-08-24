@@ -1,0 +1,30 @@
+{
+    "version": "0.1.0",
+    "command": "gulp",
+    "isShellCommand": true,
+    "args": [
+        "--no-color"
+    ],
+    "tasks": [
+        {
+            "taskName": "clean",
+            "args": [],
+            "isBuildCommand": false,
+            "isWatching": false
+        },
+        {
+            "taskName": "build",
+            "args": [],
+            "isBuildCommand": true,
+            "isWatching": false,
+            "problemMatcher": ["$tsc"]
+        },
+        {
+            "taskName": "test",
+            "args": [],
+            "isBuildCommand": false,
+            "isTestCommand": true,
+            "isWatching": false
+        }
+    ]
+}
