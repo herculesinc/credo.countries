@@ -6,7 +6,7 @@ A simple country info look-up module written for credo application.
 $ npm install --save @credo/countries
 ```
 ## API
-The module provides the information about countries in the following format:
+The module provides information about world countries in the following format:
 
 ```javascript
     {
@@ -25,7 +25,7 @@ Where:
   * `alpha2` The [ISO 3166-1 alpha 2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code
   * `alpha3` The [ISO 3166-1 alpha 3](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) code
   * `currencies` An array of [ISO 4217 currency codes](http://en.wikipedia.org/wiki/ISO_4217) with the primary one first
-  * `languages` An array of [ISO 639-2](http://en.wikipedia.org/wiki/ISO_639-2) codes for languages (may not be complete)
+  * `languages` An array of [ISO 639-2](http://en.wikipedia.org/wiki/ISO_639-2) codes for languages
   * `CallingCodes` An array of the international call prefixes for this country
 
 ### Country Lookup
