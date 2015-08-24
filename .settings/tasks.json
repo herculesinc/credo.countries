@@ -10,21 +10,36 @@
             "taskName": "clean",
             "args": [],
             "isBuildCommand": false,
-            "isWatching": false
+            "isTestCommand": false,
+            "isWatching": false,
+            "showOutput": "silent"
         },
         {
             "taskName": "build",
             "args": [],
             "isBuildCommand": true,
+            "isTestCommand": false,
             "isWatching": false,
-            "problemMatcher": ["$tsc"]
+            "problemMatcher": ["$tsc"],
+            "showOutput": "silent"
         },
         {
             "taskName": "test",
             "args": [],
             "isBuildCommand": false,
             "isTestCommand": true,
-            "isWatching": false
+            "isWatching": false,
+            "problemMatcher": ["$tsc"],
+            "showOutput": "always"
+        },
+        {
+            "taskName": "publish",
+            "args": [],
+            "isBuildCommand": false,
+            "isTestCommand": false,
+            "isWatching": false,
+            "problemMatcher": ["$tsc"],
+            "showOutput": "always"
         }
     ]
 }

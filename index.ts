@@ -53,7 +53,9 @@ export function map<T>(callback: (country: Country, index?: number) => T, trimEm
     var retval: T[] = [];
     for (let i = 0; i < countries.length; i++) {
         let mapped = callback(countries[i], i);
-        if (mapped || trimEmpty === false) retval.push(mapped);
+        if ((mapped !== null && mapped !== undefined) || trimEmpty === false) {
+            retval.push(mapped);
+        }
     }
     return retval;
 }

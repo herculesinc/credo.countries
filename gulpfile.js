@@ -27,5 +27,13 @@ gulp.task('test', ['build'], function () {
         .pipe(mocha({reporter: 'spec'}));
 });
 
+gulp.task('publish', ['build'], function (cb) {
+  exec('npm publish bin', function (err, stdout, stderr) {
+    if (stdout.length > 0) console.log(stdout);
+    if (stderr.length > 0) console.error(stderr);
+    cb(err);
+  });
+});
+
 // define default task
 gulp.task('default', ['build']);

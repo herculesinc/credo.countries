@@ -80,7 +80,6 @@ describe("Country map tests", () => {
     });
     
     it("Should trim empty values by default", () => {
-        var i = 0;
         var euroCountries = countries.map((country) => {
             if (country.currencies.indexOf('eur') > -1){
                 return country;
@@ -90,7 +89,6 @@ describe("Country map tests", () => {
     });
     
     it("Should preserve empty values when asked", () => {
-        var i = 0;
         var euroCountries = countries.map((country) => {
             if (country.currencies.indexOf('eur') > -1){
                 return country;

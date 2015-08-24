@@ -35,8 +35,9 @@ function map(callback, trimEmpty) {
     var retval = [];
     for (var i = 0; i < countries.length; i++) {
         var mapped = callback(countries[i], i);
-        if (mapped || trimEmpty === false)
+        if ((mapped !== null && mapped !== undefined) || trimEmpty === false) {
             retval.push(mapped);
+        }
     }
     return retval;
 }
