@@ -9,15 +9,15 @@ $ npm install --save @credo/countries
 The module provides information about world countries in the following format:
 
 ```javascript
-    {
-        "alpha2": "us",
-        "alpha3": "usa",
-        "name": { "common": "United States", "official": "United States of America" },
-        "tld": [".us"],
-        "currencies": ["usd","usn","uss"],
-        "callingCodes": ["1"],
-        "languages": ["eng"]
-    }
+{
+    "alpha2": "us",
+    "alpha3": "usa",
+    "name": { "common": "United States", "official": "United States of America" },
+    "tld": [".us"],
+    "currencies": ["usd","usn","uss"],
+    "callingCodes": ["1"],
+    "languages": ["eng"]
+}
 ```
 
 Where:
@@ -26,7 +26,7 @@ Where:
   * `alpha3` The [ISO 3166-1 alpha 3](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) code
   * `currencies` An array of [ISO 4217 currency codes](http://en.wikipedia.org/wiki/ISO_4217) with the primary one first
   * `languages` An array of [ISO 639-2](http://en.wikipedia.org/wiki/ISO_639-2) codes for languages
-  * `CallingCodes` An array of the international call prefixes for this country
+  * `callingCodes` An array of the international call prefixes for this country
 
 ### Country Lookup
 A `find(codeOrName)` function can be used look up a country by code or name:
@@ -69,6 +69,7 @@ var euroCountries = countries.map((country) => {
 });
 assert.strictEqual(euroCountries.length, 35); // OK
 ```
+<<<<<<< HEAD
 
 ## License
 
@@ -79,3 +80,5 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+=======
+>>>>>>> fb4b01925bd1cfd3937c5563aa6016e9c91c34ca
