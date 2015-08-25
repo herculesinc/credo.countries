@@ -1,6 +1,6 @@
 {
   "name": "@credo/countries",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Country data for Credo application",
   "main": "index.js",
   "repository": {
@@ -12,6 +12,13 @@
     "name": "irakliy",
     "email": "irakliy81@live.com"
   },
+  "keywords": [
+    "country",
+    "countries",
+    "ISO 3166-1",
+    "world",
+    "data"
+  ],
   "engines": {
     "node": "0.12.6"
   },
