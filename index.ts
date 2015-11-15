@@ -1,4 +1,5 @@
-﻿// MODULE VARIABLES
+﻿'use strict';
+// MODULE VARIABLES
 // =================================================================================================
 var countries: Country[] = require('./data/countries');
 var alpha2Map = new Map<string, Country>();
@@ -59,7 +60,8 @@ export function forEach(callback: (country: Country, index?: number) => any): vo
 /**
  * Maps all countries using provided callback funciton; if trimEmpty = true (default), excludes empty values from returned array
  */
-export function map<T>(callback: (country: Country, index?: number) => T, trimEmpty = true): T[] {
+export function map<T>(callback: (country: Country, index?: number) => T, trimEmpty?: boolean): T[] {
+    trimEmpty = typeof trimEmpty === 'boolean' ? trimEmpty : true;
     var retval: T[] = [];
     for (let i = 0; i < countries.length; i++) {
         let mapped = callback(countries[i], i);
