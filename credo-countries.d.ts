@@ -19,6 +19,11 @@
     // --------------------------------------------------------------------------------------------
     
     /**
+     * Gets a country by alpha2 code (lower cose)
+     */
+    export function get(alpha2: string): Country;
+
+    /**
      * Finds a country for the specified contry code (alpha2 or alpha3) or country name (common or official)
      */
     export function find(codeOrName: string): Country;

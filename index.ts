@@ -1,5 +1,4 @@
-﻿'use strict';
-// MODULE VARIABLES
+﻿// MODULE VARIABLES
 // =================================================================================================
 var countries: Country[] = require('./data/countries');
 var alpha2Map = new Map<string, Country>();
@@ -28,6 +27,14 @@ export interface Country {
 
 // PUBLIC FUNCTIONS
 // =================================================================================================
+
+/**
+ * Gets a country by alpha2 code (lower cose)
+ */
+export function get(alpha2: string): Country {
+    alpha2 = alpha2 ? alpha2.toLowerCase() : undefined;
+    return alpha2Map.get(alpha2);
+}
 
 /**
  * Finds a country for the specified contry code (alpha2 or alpha3) or country name (common or official)

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 // MODULE VARIABLES
 // =================================================================================================
 var countries = require('./data/countries');
@@ -11,6 +11,14 @@ for (let i = 0; i < countries.length; i++) {
 }
 // PUBLIC FUNCTIONS
 // =================================================================================================
+/**
+ * Gets a country by alpha2 code (lower cose)
+ */
+function get(alpha2) {
+    alpha2 = alpha2 ? alpha2.toLowerCase() : undefined;
+    return alpha2Map.get(alpha2);
+}
+exports.get = get;
 /**
  * Finds a country for the specified contry code (alpha2 or alpha3) or country name (common or official)
  */
