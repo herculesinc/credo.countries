@@ -1,11 +1,12 @@
 'use strict';
 // IMPORTS
 // ================================================================================================
-const gulp  = require( 'gulp' );
-const del   = require( 'del' );
-const exec  = require( 'child_process' ).exec;
-const mocha = require( 'gulp-mocha' );
-const gutil = require( 'gulp-util' );
+const gulp       = require( 'gulp' );
+const del        = require( 'del' );
+const exec       = require( 'child_process' ).exec;
+const mocha      = require( 'gulp-mocha' );
+const gutil      = require( 'gulp-util' );
+const jsonminify = require( 'gulp-jsonminify' );
 
 // TASKS
 // ================================================================================================
@@ -24,12 +25,12 @@ gulp.task('compile', [ 'clean' ], function (cb) {
 
 // build the project
 gulp.task('build', [ 'compile' ], function (cb) {
-  gulp.src('./data/*').pipe(gulp.dest('./bin/data'));
+  gulp.src('./data/*').pipe(jsonminify()).pipe(gulp.dest('./bin/data'));
   gulp.src('./package.json').pipe(gulp.dest('./bin'));
   gulp.src('./credo-countries.d.ts').pipe(gulp.dest('./bin'));
   gulp.src('./.settings/.npmignore').pipe(gulp.dest('./bin'));
   gulp.src('./README.md').pipe(gulp.dest('./bin'));
-  cb();
+  setTimeout(cb, 2000);
 });
 
 // run tests

@@ -3,16 +3,18 @@ declare module "@credo/countries" {
     // INTERFACES
     // --------------------------------------------------------------------------------------------
     export interface Country {
-        alpha2: string;
-        alpha3: string;
+        alpha2          : string;
+        alpha3          : string;
         name: {
-            common: string;
-            official: string;
-        },
-        tld: string[],
-        currencies: string[],
-        callingCodes: string[],
-        languages: string[]
+            common      : string;
+            official    : string;
+        };
+        tld             : string[];
+        currencies      : string[];
+        languages       : string[];
+        callingCode     : string;
+        areaCodes       : string[];
+        phoneNumberLength: number[];
     }
     
     // PUBLIC FUNCTIONS
@@ -28,6 +30,11 @@ declare module "@credo/countries" {
      */
     export function find(codeOrName: string): Country;
     
+    /**
+     * Finds a country for the specified phone number
+     */
+    export function findByPhone(phoneNumber: string, defaultCountry?: string): Country;
+
     /** 
      * Iterates over all countries and calls the callback function for each county
      */

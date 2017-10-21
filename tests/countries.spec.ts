@@ -49,7 +49,7 @@ describe("Country forEach tests", () => {
                 assert.strictEqual(country.name.official, 'United States of America');
             }
         });
-        assert.strictEqual(count, 248);
+        assert.strictEqual(count, 247);
     });
     
     it("Should correctly pass iteration index", () => {
@@ -67,7 +67,7 @@ describe("Country map tests", () => {
            return country.name.common; 
         });
         
-        assert.strictEqual(names.length, 248);
+        assert.strictEqual(names.length, 247);
         assert.strictEqual(names[0], 'Aruba');
     });
     
@@ -94,6 +94,6 @@ describe("Country map tests", () => {
                 return country;
             }
         }, false);
-        assert.strictEqual(euroCountries.length, 248);
+        assert.strictEqual(euroCountries.length, 247);
     });
 });

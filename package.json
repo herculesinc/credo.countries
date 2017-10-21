@@ -1,6 +1,6 @@
 {
   "name": "@credo/countries",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Country data for Credo application",
   "keywords": [
     "country",
@@ -21,11 +21,12 @@
     "url": "https://github.com/herculesinc/credo.countries.git/"
   },
   "engines": {
-    "node": "6.4.0"
+    "node": "6.11.x"
   },
   "devDependencies": {
     "del": "2.2.x",
     "gulp": "3.9.x",
+    "gulp-jsonminify": "1.0.x",
     "gulp-mocha": "2.2.x",
     "mocha": "2.5.x"
   }
