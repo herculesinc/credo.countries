@@ -20,6 +20,7 @@ for (let country of countries) {
         }
     }
 }
+const NUMBER_REGEX = /^[0-9]+$/;
 // PUBLIC FUNCTIONS
 // =================================================================================================
 /**
@@ -72,6 +73,8 @@ function findByPhone(phoneNumber, defaultCountry = 'us') {
             path = phoneNumber;
         }
     }
+    if (!NUMBER_REGEX.test(path))
+        return undefined;
     let node = findPhoneNode(phoneTree, path);
     if (node) {
         const country = node.country;
