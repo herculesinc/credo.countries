@@ -642,7 +642,8 @@
 	"tld": [".cw"],
 	"currencies": ["ang"],
 	"languages": ["eng", "nld", "pap"],
-	"callingCode": "5999"
+	"callingCode": "599",
+	"phoneNumberLength": [8]
 }, {
 	"alpha2": "cx",
 	"alpha3": "cxr",
@@ -1247,7 +1248,8 @@
 	"tld": [".io"],
 	"currencies": ["usd"],
 	"languages": ["eng"],
-	"callingCode": "246"
+	"callingCode": "246",
+	"phoneNumberLength": [7]
 }, {
 	"alpha2": "ie",
 	"alpha3": "irl",
@@ -1463,7 +1465,8 @@
 	"tld": [],
 	"currencies": ["eur"],
 	"languages": ["sqi", "srp"],
-	"callingCode": "383"
+	"callingCode": "383",
+	"phoneNumberLength": [8]
 }, {
 	"alpha2": "kw",
 	"alpha3": "kwt",
@@ -2168,7 +2171,8 @@
 	"tld": [".kp"],
 	"currencies": ["kpw"],
 	"languages": ["kor"],
-	"callingCode": "850"
+	"callingCode": "850",
+	"phoneNumberLength": [6, 7, 8, 9, 10]
 }, {
 	"alpha2": "pt",
 	"alpha3": "prt",
@@ -2428,7 +2432,8 @@
 	"tld": [".ss"],
 	"currencies": ["ssp"],
 	"languages": ["eng"],
-	"callingCode": "211"
+	"callingCode": "211",
+	"phoneNumberLength": [9]
 }, {
 	"alpha2": "st",
 	"alpha3": "stp",
@@ -2499,7 +2504,8 @@
 	"tld": [".sz"],
 	"currencies": ["szl"],
 	"languages": ["eng", "ssw"],
-	"callingCode": "268"
+	"callingCode": "268",
+	"phoneNumberLength": [8]
 }, {
 	"alpha2": "sx",
 	"alpha3": "sxm",
@@ -2801,7 +2807,7 @@
 	"tld": [".va"],
 	"currencies": ["eur"],
 	"languages": ["ita", "lat"],
-	"callingCode": "379"
+	"callingCode": null
 }, {
 	"alpha2": "vc",
 	"alpha3": "vct",
